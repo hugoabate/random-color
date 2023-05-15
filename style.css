@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#color-display {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f26419;
+  border: 2px solid black;
+}
+
+#colorBtn:hover,
+#copyBtn:hover {
+  transform: scale(1.1);
+}
+
+#colorBtn.clicked,
+#copyBtn.clicked {
+  background-color: #222;
+  color: #fff;
+}
+
+#copyBtn.clicked::after {
+  content: "Copied!";
+}
+
+#footer {
+  height: 15vh;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #fff;
+}
+
+.anchor:hover {
+  color: #f26419;
+}
+
+#myName {
+  color: #fff;
+}
+
+@media (max-width: 549px) {
+  .title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 280px) {
+  .color-box {
+    padding: 10px;
+  }
+
+  #color-display {
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+    line-height: 150px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  button {
+    margin: 5px 0;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
